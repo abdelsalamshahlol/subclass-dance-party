@@ -30,3 +30,16 @@ var makeDancer = function(top, left, timeBetweenSteps) {
 
   return dancer;
 };
+
+// Refacotored Code to Pseudoclassical
+var makeDancer = function(top, left, timeBetweenSteps) {
+
+}
+
+makeDancer.prototype.step = function() {
+  setTimeout(this.step, this.timeBetweenSteps);
+}
+
+makeDancer.prototype.setPosition = function(top, left) {
+
+}
