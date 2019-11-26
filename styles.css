@@ -32,6 +32,14 @@ body, a:link, a:visited, a:active{
   animation: shake 10s cubic-bezier(0.1, 0.7, 1.0, 0.1) infinite;
 }
 
+.minion {
+  background-image: url(img/minion1.gif);
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  background-size: cover;
+}
+
 @keyframes move {
   0%{
     top: 4%;
