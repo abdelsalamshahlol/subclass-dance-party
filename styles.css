@@ -29,7 +29,7 @@ body, a:link, a:visited, a:active{
   border:10px solid #0073aa;
   border-radius:10px;
   position:absolute;
-  animation: shake 10s ease-in infinite;
+  animation: shake 10s cubic-bezier(0.1, 0.7, 1.0, 0.1) infinite;
 }
 
 @keyframes move {
