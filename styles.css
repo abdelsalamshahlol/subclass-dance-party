@@ -1,6 +1,7 @@
 body, html{
   height:100%;
 }
+
 body{
   margin: 0px;
   background-color:#fff;
@@ -10,74 +11,104 @@ body{
   background-size: cover;
   background-repeat: no-repeat;
 }
+
 body, a:link, a:visited, a:active{
   color: lightblue;
 }
+
 .title, .addDancerButton{
   padding:5px 12px;
   float:right;
 }
+
 .topbar{
   height:32px;
   background-color: #555;
 }
+
 .title{
   background-color: #777;
 }
+
 .dancer{
   border:10px solid red;
   border-radius:10px;
   position:absolute;
 }
+
 .shakey{
   border:10px solid #0073aa;
   border-radius:10px;
   position:absolute;
-  animation: shake 10s cubic-bezier(0.1, 0.7, 1.0, 0.1) infinite;
-}
-
-.minion{
-  background-image: url(img/minion1.gif);
-  position: absolute;
-  width: 90px;
-  height: 90px;
-  background-size: cover;
-  /*animation: shake 1s cubic-bezier(0.1, 0.7, 1.0, 0.1) ;*/
 }
 
 .tenor{
   width: 100px;
   top: 85%;
   position: absolute;
+  animation: shake 4s ease-in forwards;
+}
+
+.cheering,
+.suprise{
+  position: absolute;
 }
 
 .cheering{
-  position: absolute
+  animation: move 10s cubic-bezier(0.1, 0.7, 1.0, 0.1) infinite;
+}
+
+.cat{
+  width: 30%;
+  animation: fly 8s ease-in forwards;
 }
 
 @keyframes move {
-  0%{
-    top: 4%;
-    left: 4%;
+  100%, 0%{
+    left: 0%;
   }
 
-  100%{
-    top:90%;
+  50%{
+    left: 20%;
+  }
+
+  80%{
     left: 60%;
   }
 }
 
 @keyframes shake {
   100%, 0%{
-    transform: translateX(10em);
-    /*transform: translateY(-10em);*/
+    transform: translateX(20em);
   }
   50%{
     transform: translateX(-5em);
     transform: translateY(-8em);
   }
   90%{
-    transform: translateX(10em);
-    transform: translateY(10em);
+    transform: translateX(4em);
+  }
+}
+
+@keyframes fly {
+  0%{
+    transform: translateX(0%);
+  }
+  20%{
+    transform: translateX(20%);
+  }
+  40%{
+    transform: translateX(40%);
+  }
+  60%{
+    filter: blur(1px);
+    transform: translateX(100%) rotateY(180deg);
+  }
+  80%{
+    transform: translateX(-40%);
+  }
+  100%{
+        filter: blur(4px);
+    transform: translateX(-20%);
   }
 }
