@@ -25,3 +25,36 @@ body, a:link, a:visited, a:active{
   border-radius:10px;
   position:absolute;
 }
+.shakey{
+  border:10px solid #0073aa;
+  border-radius:10px;
+  position:absolute;
+  animation: shake 10s ease-in infinite;
+}
+
+@keyframes move {
+  0%{
+    top: 4%;
+    left: 4%;
+  }
+
+  100%{
+    top:90%;
+    left: 60%;
+  }
+}
+
+@keyframes shake {
+  100%, 0%{
+    transform: translateX(-10em);
+    transform: translateY(-10em);
+  }
+  50%{
+    transform: translateX(-8em);
+    transform: translateY(-8em);
+  }
+  90%{
+    transform: translateX(10em);
+    transform: translateY(10em);
+  }
+}
